@@ -2,7 +2,8 @@
 import editIcon from "./assets/edit-icon.svg";
 import trashIcon from "./assets/trash-icon.svg";
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
   // states e variáveis
@@ -16,18 +17,40 @@ function App() {
   // em seguida fazer um map e gerar os cards (article)
   // com todas as tarefas
 
-  const [tasklist, setTasklist] = useState([
-    { id: 1, descricao: "Revisar HTML Semântico" },
-    { id: 2, descricao: "Revisar ReactJS" },
-    { id: 3, descricao: "Revisar ReactJS" },
-    { id: 4, descricao: "Estudar React Native" },
-    { id: 5, descricao: "Estudar React Native" },
-    { id: 6, descricao: "Estudar React Native" },
-    { id: 7, descricao: "Estudar React Native" },
-    { id: 8, descricao: "Estudar React Native" },
-  ]);
+  const [tasklist, setTasklist] = useState([]);
 
   // funções e effects
+  // CRUD
+
+  // Read (Get)
+  const getTaks = async () => {
+    try {
+      // chamar a api
+      const APIReturn = await axios.get("http://localhost:3000/taskpoin")
+      const dataAPI = await APIReturn.data 
+      console.log(dataAPI);
+      
+      // e armazenar os dados no state (tasklist)
+      setTasklist(dataAPI)
+    } catch (error) {
+      alert("Erro ao carregar os dados")
+      console.log(error);
+    }
+  }
+  
+  // Create (Post)
+  const createTaks = () => {}
+  
+  // Update (Put/Patch)
+  const putTask = () => {}
+  
+  // Delete (Delete)
+  const deleteTask = () => {}
+
+  // roda na montagem do componente - ciclo de vida dos componentes React
+  useEffect(()=>{
+    getTaks()
+  }, [])
 
   return (
     <>
