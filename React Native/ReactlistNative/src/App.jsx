@@ -3,7 +3,7 @@ import {  Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Styles } from "./Styles";
 import { Header } from "./components/header/Header";
-import { FrmCadTask } from "./components/frmCadTask/FrmCadTask";
+import { FormTask } from "./components/formtask/FormTask";
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <SafeAreaProvider>
       <SafeAreaView style={Styles.safeArea}>
         <Header />
-        <FrmCadTask />
+        <FormTask />
         <View style={Styles.container}>
           <Text>My App</Text>
           <StatusBar style="auto" />
