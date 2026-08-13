@@ -1,7 +1,17 @@
 {
   "taskpoint": [
-    { "id": 1, "descricao": "Estudar React Native" },
-    { "id": 2, "descricao": "Estudar JavaScript" },
-    { "id": 3, "descricao": "Estudar React JS" }
-  ]
+    {
+      "descricao": "Estudar React 2",
+      "id": "16YEYmKaQIQ"
+    },
+    {
+      "descricao": "Lavar as louças",
+      "id": "lbLLwEtsyFg"
+    },
+    {
+      "descricao": "Revisar JavaScript",
+      "id": "lTPnDkJi3lQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
