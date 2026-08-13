@@ -12,7 +12,7 @@ export const TaskList = () => {
     const getTasks = async () => {
       try {
         // endereço do servidor (protocolo://endereçoDoServidor:porta/endpoint)
-        const APIReturn = await axios.get("http://172.16.1.105:3000/taskpoint")
+        const APIReturn = await axios.get("http://172.16.1.99:3000/taskpoint")
         const APIData = await APIReturn.data
         
         setListaTarefas(APIData)
@@ -53,7 +53,11 @@ export const TaskList = () => {
         listaTarefas.map((tarefa)=> {
           return(
 
-            <TaskItem dados={tarefa}/>
+            <TaskItem 
+              key={tarefa.id} 
+              id={tarefa.id} 
+              descricao={tarefa.descricao}
+            />
           )
         })
       }

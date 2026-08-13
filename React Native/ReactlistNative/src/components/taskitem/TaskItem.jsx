@@ -2,7 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { TaskItemStyle } from "./TaskItemStyle";
 
 // recebe o objeto do item como prop
-export const TaskItem = ( { dados: {id, descricao} } ) => {
+export const TaskItem = ( { id, descricao } ) => {
     
     return (
         <View style={TaskItemStyle.cardBox}>
