@@ -11,7 +11,7 @@ const localApi = `http://${apiUri}:${apiPort}`;//end. do swagger
 // Define uma variável para uma API externa, mas no momento ela está como 'null' (não sendo usada)
 const externalApi = null;
 
-// Cria uma instância do axios configurada com a URL base apontando para a API local
+// Cria uma instância d`o axios configurada com a URL base apontando para a API local
 const api = axios.create({
     baseURL : localApi
 });
